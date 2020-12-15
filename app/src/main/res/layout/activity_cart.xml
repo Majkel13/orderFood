@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="15dp"
+    android:background="@drawable/my_bg"
+    tools:context=".Cart">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/listCart"
+        android:background="@color/transparent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_alignParentBottom="true"
+        app:cardBackgroundColor="@color/primary"
+        android:layout_width="match_parent"
+        android:layout_height="370dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_marginLeft="8dp"
+
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="8dp"
+                    android:gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text="Suma: "
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:id="@+id/total"
+                        android:text="12,33 zł"
+                        android:textSize="24sp"
+                        android:textColor="@color/white"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+
+                    <TextView
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginTop="7dp"
+                        android:text="Wykorzystaj swoje punkty i zmniejsz warotsć zamówienia "
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:textColor="@color/white"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/radioGroupPoints">
+                        <RadioButton
+                            android:id="@+id/tenPoints"
+                            android:text="10 punktów = -10% (masz za mało punktów)"
+                            android:textSize="14sp"
+                            android:textColor="@color/white"
+                            android:layout_width="wrap_content"
+                            android:layout_height="25dp"
+                            android:onClick="CheckPayment"
+                            android:textStyle="italic"
+                            android:textColorLink="@color/black"
+                            android:textColorHint="@color/black"
+                            android:enabled="false"/>
+                        <RadioButton
+                            android:id="@+id/twentyPoints"
+                            android:text="20 punktów = -20% (masz za mało punktów)"
+                            android:textSize="14sp"
+                            android:textColorHint="@color/black"
+                            android:textColor="@color/white"
+                            android:textStyle="italic"
+                            android:layout_width="wrap_content"
+                            android:layout_height="25dp"
+                            android:onClick="CheckPayment"
+                            android:enabled="false"/>
+                    </RadioGroup>
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="5dp">
+                    <TextView
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:text="Wybierz rodzaj płatności: "
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:textColor="@color/white"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/radioGroup">
+                        <RadioButton
+                            android:id="@+id/karta"
+                            android:text="Karta"
+                            android:textSize="14sp"
+                            android:textColor="@color/white"
+                            android:layout_width="wrap_content"
+                            android:layout_height="25dp"/>
+                        <RadioButton
+                            android:id="@+id/gotowka"
+                            android:text="Gotówka"
+                            android:textSize="14sp"
+                            android:textColor="@color/white"
+                            android:layout_width="wrap_content"
+                            android:layout_height="25dp"
+                            android:checked="true"/>
+                    </RadioGroup>
+                </LinearLayout>
+
+
+                <TextView
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:text="Podaj adres dostawy: "
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:textColor="@color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <EditText
+                    android:id="@+id/editOrderAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:textColor="@color/white"
+                    android:layout_marginStart="8dp"
+                    android:textSize="16sp"
+                    />
+
+                <Button
+                    android:id="@+id/btnPlaceOrder"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:backgroundTint="@color/btnSignActive"
+                    android:text="Złóż zamówienie"
+                    android:textColor="@android:color/white"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:textSize="18sp"/>
+                <Button
+                    android:id="@+id/btnCancelOrder"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:backgroundTint="@color/black"
+                    android:text="Wyczyść koszyk"
+                    android:textColor="@android:color/white"
+                    android:paddingTop="1dp"
+                    android:paddingBottom="1dp"
+                    android:textSize="14sp"/>
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

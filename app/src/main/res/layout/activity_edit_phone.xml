@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".edit_phone">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Podaj nowy numer "
+            android:textColor="@android:color/black"
+            android:textSize="26sp"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            />
+
+        <EditText
+            android:id="@+id/editPhone"
+            android:hint="Numer"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:textColorHint="@android:color/black"
+            android:text=""
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            android:inputType="text"
+            />
+        <Button
+            android:id="@+id/saveUpdatePhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/btnSignActive"
+            android:text="Zapisz zmiany"
+            android:textColor="@android:color/white"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:textSize="18sp"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/btnSignUp"
+            android:text="Anuluj"
+            android:textColor="@android:color/white"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:textSize="18sp"
+            android:onClick="ClickCancelUpdate"/>
+    </LinearLayout>
+
+</RelativeLayout>

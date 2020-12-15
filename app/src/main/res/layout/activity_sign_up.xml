@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/my_bg"
+    tools:context=".SignUp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/edtName"
+            android:hint="Imie i Nazwisko"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@android:color/white"
+            android:text=""
+            android:textColor="@android:color/white"
+            android:textSize="24sp"
+            android:inputType="text"
+            app:met_textColorHint="@color/secondary_text"
+            app:met_baseColor="@color/white"
+            app:met_underlineColor="@color/secondary_text"
+            app:met_floatingLabel="highlight"
+            app:met_maxCharacters="30"
+            app:met_primaryColor="@android:color/white"
+            app:met_singleLineEllipsis="true"
+            />
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/edtAddress"
+            android:hint="Adres"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@android:color/white"
+            android:text=""
+            android:textColor="@android:color/white"
+            android:textSize="24sp"
+            android:inputType="text"
+            app:met_textColorHint="@color/secondary_text"
+            app:met_baseColor="@color/white"
+            app:met_underlineColor="@color/secondary_text"
+            app:met_floatingLabel="highlight"
+            app:met_maxCharacters="50"
+            app:met_primaryColor="@android:color/white"
+            app:met_singleLineEllipsis="true"
+            />
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/edtPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Numer telefonu"
+            android:inputType="phone"
+            android:text=""
+            android:textColor="@android:color/white"
+            android:textColorHint="@android:color/white"
+            android:textSize="24sp"
+            app:met_baseColor="@color/white"
+            app:met_floatingLabel="highlight"
+            app:met_maxCharacters="22"
+            app:met_primaryColor="@android:color/white"
+            app:met_singleLineEllipsis="true"
+            app:met_textColorHint="@color/secondary_text"
+            app:met_underlineColor="@color/secondary_text" />
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/edtMail"
+            android:hint="E-mail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@android:color/white"
+            android:text=""
+            android:textColor="@android:color/white"
+            android:textSize="24sp"
+            android:inputType="textEmailAddress"
+            app:met_textColorHint="@color/secondary_text"
+            app:met_baseColor="@color/white"
+            app:met_underlineColor="@color/secondary_text"
+            app:met_floatingLabel="highlight"
+            app:met_maxCharacters="30"
+            app:met_primaryColor="@android:color/white"
+            app:met_singleLineEllipsis="true"
+            />
+
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/edtPassword"
+            android:hint="Hasło"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@android:color/white"
+            android:text=""
+            android:textColor="@android:color/white"
+            android:textSize="24sp"
+            android:inputType="textPassword"
+            app:met_textColorHint="@color/secondary_text"
+            app:met_baseColor="@color/white"
+            app:met_underlineColor="@color/secondary_text"
+            app:met_floatingLabel="highlight"
+            app:met_maxCharacters="20"
+            app:met_minCharacters="8"
+            app:met_primaryColor="@android:color/white"
+            app:met_singleLineEllipsis="true"
+            />
+
+        <Button
+            android:id="@+id/btnSignUp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/btnSignUp"
+            android:text="Rejestracja"
+            android:textColor="@android:color/white"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Masz już konto? ZALOGUJ SIĘ"
+            android:textColor="@color/secondary_text"
+            android:id="@+id/goToLogin"
+            />
+
+
+    </LinearLayout>
+
+
+
+
+
+</RelativeLayout>
